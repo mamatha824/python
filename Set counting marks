@@ -1,0 +1,3 @@
+stu={"shaheena":[90,80,70],"sameera":[66,87,88],"munna":[45,65,71]}
+for i in stu:
+    print("{}.{}".format(i,sum(stu[i])))
