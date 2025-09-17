@@ -1,0 +1,13 @@
+students=[{"Name":"raju","dept":"cse","marks":[20,30,40]},
+          {"Name": "samee", "dept": "cse", "marks": [50, 30, 70]},
+          {"Name": "shaheena", "dept": "cse", "marks": [20, 60, 40]},
+          {"Name": "munna", "dept": "cse", "marks": [25, 50, 40]},
+          {"Name": "najumoon", "dept": "cse", "marks": [20, 70, 40]}
+          ]
+des=["First","second","Third","fourth","fifth"]
+for i in students:
+    total= sum(i["marks"])
+    i["per"]=total//3
+res=sorted(students,key=lambda x:x["per"],reverse=True)
+for i in range(5):
+    print("{}.{}({}%)stands{}".format(i+1,res[i]["Name"],res[i]["per"],des[i]))
