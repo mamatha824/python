@@ -1,0 +1,14 @@
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Loop through all 3-digit numbers
+for num in range(100, 1000):
+    digit_sum = sum(int(d) for d in str(num))
+    if is_prime(digit_sum):
+        print(num, "=>", digit_sum, "is PRIME")
+
